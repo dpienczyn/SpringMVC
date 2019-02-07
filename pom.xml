@@ -12,6 +12,7 @@
         <mysql.connector.version>5.1.31</mysql.connector.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <webapp-runner-tomcat.version>7.0.82.0</webapp-runner-tomcat.version>
+        <maven-dependecy-plugin.version>2.10</maven-dependecy-plugin.version>
     </properties>
 
     <dependencies> 
