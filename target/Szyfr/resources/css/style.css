@@ -1,0 +1,130 @@
+nav {
+	background-color: #333;
+	height: 75px;
+	border-bottom: 1px solid #000;
+	position: relative;
+}
+
+nav .menu-bar {
+	font-weight: bold;
+}
+
+nav .menu-bar {
+	float: right;
+	line-height: 75px;
+}
+
+nav .menu-bar>ul>li>i {
+	display: none;
+}
+
+nav .menu-bar ul li {
+	display: inline-block;
+}
+
+nav .menu-bar>ul>li>a {
+	padding: 10px 50px;
+	border-radius: 10px;
+	color: #efba32;
+}
+
+nav .menu-bar>ul>li>.dropdown-menu-bar {
+	position: absolute;
+	display: none;
+}
+
+nav .menu-bar>ul>li:hover .dropdown-menu-bar {
+	display: block;
+	animation-duration: 1s;
+	animation-name: example;
+	animation-iteration-count: 1;
+}
+
+@
+keyframes example {
+	from {transform: translate(-40px, 10px) rotateY(90deg);
+	opacity: 0.2;
+}
+
+to {
+	transform: translate(0px, 0px) rotateY(0deg);
+	opacity: 1.0;
+}
+
+}
+nav .menu-bar>ul>li>.dropdown-menu-bar ul li {
+	display: block;
+	line-height: 35px;
+	border-bottom: 1px solid #c2c2c2;
+}
+
+nav .menu-bar>ul>li>.dropdown-menu-bar>ul>li>a {
+	padding: 0px 60px;
+}
+
+nav .menu-bar>ul>li>.dropdown-menu-bar>ul>li:hover {
+	background-color: #333;
+}
+
+nav .mobile-menu {
+	color: #333;
+	right: 30px;
+	position: absolute;
+	font-size: 30px;
+	line-height: 75px;
+}
+
+nav .mobile-menu {
+	display: none;
+}
+
+@media only screen and (max-device-width : 992px) {
+	nav .menu-bar {
+		display: none;
+	}
+	nav .menu-bar ul {
+		margin: 0px;
+		padding: 0px;
+	}
+	nav .menu-bar .dropdown-menu-bar ul {
+		margin: 0px;
+		padding: 0px;
+	}
+	nav .menu-bar {
+		width: 100%;
+		background-color: green;
+		margin-top: 75px;
+	}
+	nav .menu-bar>ul>li {
+		display: block;
+		line-height: 30px;
+		border-bottom: 1px solid #c2c2c2;
+		text-align: left;
+	}
+	nav .menu-bar>ul>li>a {
+		padding: 0px 10px;
+	}
+	nav .mobile-menu {
+		display: block;
+	}
+	nav .menu-bar>ul>li>i {
+		float: right;
+		color: #fff;
+		font-size: 20px;
+		padding: 0px 5px;
+		line-height: 30px;
+		display: block;
+	}
+	.dropdown-menu-bar {
+		width: 100%;
+		display: none;
+		background-color: red;
+	}
+	.dropdown-menu-bar>ul>li {
+		display: block;
+		text-align: center;
+		line-height: 35px;
+		z-index: 1000;
+		border-bottom: 1px solid #c2c2c2;
+	}
+}
