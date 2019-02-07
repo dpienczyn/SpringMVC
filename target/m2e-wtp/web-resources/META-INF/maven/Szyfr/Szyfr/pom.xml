@@ -11,9 +11,16 @@
         <hibernate.version>4.3.11.Final</hibernate.version>
         <mysql.connector.version>5.1.31</mysql.connector.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <webapp-runner-tomcat.version>7.0.82.0</webapp-runner-tomcat.version>
     </properties>
 
-    <dependencies>
+    <dependencies> 
+<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-servlet-api</artifactId>
+    <version>7.0.82</version>
+</dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -146,6 +153,27 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
+                 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>${maven-dependecy-plugin.version}</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>${webapp-runner-tomcat.version}</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
             </plugins>
         </pluginManagement>
         <finalName>Szyfr</finalName>
