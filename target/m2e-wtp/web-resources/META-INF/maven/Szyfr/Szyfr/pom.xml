@@ -11,8 +11,6 @@
         <hibernate.version>4.3.11.Final</hibernate.version>
         <mysql.connector.version>5.1.31</mysql.connector.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <webapp-runner-tomcat.version>8.0.30.2</webapp-runner-tomcat.version>
-        <maven-dependecy-plugin.version>2.10</maven-dependecy-plugin.version>
     </properties>
 
     <dependencies> 
@@ -177,10 +175,10 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
-                 <plugin>
+                <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
-            <version>${maven-dependecy-plugin.version}</version>
+            <version>2.3</version>
             <executions>
                 <execution>
                     <phase>package</phase>
@@ -190,7 +188,7 @@
                             <artifactItem>
                                 <groupId>com.github.jsimone</groupId>
                                 <artifactId>webapp-runner</artifactId>
-                                <version>${webapp-runner-tomcat.version}</version>
+                                <version>9.0.11.0</version>
                                 <destFileName>webapp-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
