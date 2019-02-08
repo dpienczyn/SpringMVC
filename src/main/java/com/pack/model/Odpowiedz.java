@@ -30,10 +30,6 @@ public class Odpowiedz implements Serializable {
 	@Column
 	private String odpprawidlowa;
 	
-	@OneToOne
-	@JoinColumn(name = "pytanieId")
-	private Pytanie pytanie;
-
 	public int getOdpId() {
 		return odpId;
 	}
@@ -48,13 +44,5 @@ public class Odpowiedz implements Serializable {
 
 	public void setOdpprawidlowa(String odpprawidlowa) {
 		this.odpprawidlowa = odpprawidlowa;
-	}
-
-	public Pytanie getPytanie() {
-		return pytanie;
-	}
-
-	public void setPytanie(Pytanie pytanie) {
-		this.pytanie = pytanie;
 	}
 }
