@@ -43,7 +43,7 @@ public class QuizController {
 	
 	@RequestMapping(value="/{pytanieId}",  method = RequestMethod.GET)
     public ModelAndView rozwiaz(@PathVariable int pytanieId, ModelAndView model,Odpowiedz odp){
-        new Pytanie();
+
 		Pytanie list = pytService.get(pytanieId);
         List<Pytanie> lista = pytService.getAllPytanie(pytanieId);
         model.addObject("lista", lista);

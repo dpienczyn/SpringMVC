@@ -77,8 +77,8 @@
 				</div>
 
 				<div class="hint">
-					<a
-						href="${pageContext.request.contextPath}/quiz/${pytanie.pytanieId}">Dalej</a><br>
+					<a href="${pageContext.request.contextPath}/quiz/${pytanie.pytanieId}">Click
+			Here</a>
 					<br> <span class="hidden show-hint">
 						<p>
 							Comment for single line //<br> comment for multi line

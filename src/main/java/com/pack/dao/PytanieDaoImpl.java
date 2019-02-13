@@ -23,5 +23,4 @@ public class PytanieDaoImpl implements PytanieDAO{
 	public List<Pytanie> getAllPytanie(int pytanieId) {
 		return sessionFactory.getCurrentSession().createQuery("from Pytanie p where p.pytanieId=:pytanieId").setParameter("pytanieId",pytanieId).list();
 	}
-
 }
