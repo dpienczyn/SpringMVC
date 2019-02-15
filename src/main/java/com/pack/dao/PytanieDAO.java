@@ -9,5 +9,4 @@ public interface PytanieDAO {
 
 	public Pytanie get(int pytanieId);
 	public List<Pytanie> getAllPytanie(int pytanieId);
-	
 }

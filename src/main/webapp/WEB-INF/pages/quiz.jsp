@@ -37,7 +37,9 @@
 					<div id="quiz">
 
 						<div class="question">
+						
 							<c:forEach var="pytanie" items="${lista}">
+							<form method="post" action="${pageContext.request.contextPath}/quiz/${pytanie.pytanieId }">
 
 								<div class="container">
 									<div class="col-md-12">
@@ -55,19 +57,19 @@
 						</div>
 						<ul>
 							<li><input type="radio" class="inputoption" id="f-option"
-								name="action" value="odp1"> <label for="f-option"
+								name="action" value="odp"> <label for="f-option"
 								class="element-animation">${pytanie.odp1}</label>
 								<div class="check"></div></li>
 
 							<li><input type="radio" class="inputoption" id="s-option"
-								name="action" value="odp2"> <label for="s-option"
+								name="action" value="odp"> <label for="s-option"
 								class="element-animation">${pytanie.odp2}</label>
 								<div class="check">
 									<div class="inside"></div>
 								</div></li>
 
 							<li><input type="radio" class="inputoption" id="t-option"
-								name="action" value="odp3"> <label for="t-option"
+								name="action" value="odp"> <label for="t-option"
 								class="element-animation">${pytanie.odp3}</label>
 								<div class="check">
 									<div class="inside"></div>
@@ -75,10 +77,12 @@
 						</ul>
 					</div>
 				</div>
-
-				<div class="hint">
-					<a href="${pageContext.request.contextPath}/quiz/${pytanie.pytanieId}">Click
-			Here</a>
+<!-- Bottom Submit -->
+						<div class="relative fullwidth col-xs-12">
+							<!-- Send Button -->
+							<button type="submit" id="submit" name="action"
+								class="form-btn semibold">Koduj</button>
+						</div>
 					<br> <span class="hidden show-hint">
 						<p>
 							Comment for single line //<br> comment for multi line
@@ -88,7 +92,7 @@
 				</div>
 				<h2>
 					<center>
-						<td>${r}</td>
+						<td>Wynik: ${r}</td>
 					</center>
 				</h2>
 				<div class="text-muted">
@@ -96,7 +100,20 @@
 				</div>
 			</div>
 		</div>
+		</form>
 		</c:forEach>
+		
+		<div class="container">
+<ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="http://localhost:8080/$%7Bproject.name%7D/quiz/1">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="http://localhost:8080/$%7Bproject.name%7D/quiz/2">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+</div>
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
 				<div id="result-of-question" style="display: none;">

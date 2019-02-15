@@ -35,23 +35,33 @@ public class QuizController {
 	@Autowired
 	private OdpowiedzService odpService;
 	
-	@RequestMapping(value = " ")
-	public ModelAndView start(ModelAndView model) {
+	@RequestMapping(value = "/{pytanieId}",  method = RequestMethod.GET)
+	public ModelAndView start(@PathVariable int pytanieId,ModelAndView model) {
+		Pytanie pyt = new Pytanie();
+		Pytanie list = pytService.get(pytanieId);
+        List<Pytanie> lista = pytService.getAllPytanie(pytanieId);
+        model.addObject("lista", lista);
 		model.setViewName("quiz");
 		return model;
 	}
 	
-	@RequestMapping(value="/{pytanieId}",  method = RequestMethod.GET)
-    public ModelAndView rozwiaz(@PathVariable int pytanieId, ModelAndView model,Odpowiedz odp){
-
+	@RequestMapping(value="/{pytanieId}",  method = RequestMethod.POST)
+    public ModelAndView rozwiaz(@PathVariable int pytanieId, ModelAndView model,Odpowiedz odp, @RequestParam String action){
+		System.out.println("Pytania");
+		Pytanie pyt = new Pytanie();
 		Pytanie list = pytService.get(pytanieId);
         List<Pytanie> lista = pytService.getAllPytanie(pytanieId);
+        	if("odp".equals(list.getOdppopr())){
+        		model.addObject("r","tak");
+        	}else
+        	System.out.println("NIE");
         model.addObject("lista", lista);
+        model.addObject("odp", list.getOdppopr());
         model.setViewName("quiz");
         return model;
 	}
 	
-	@RequestMapping(value="/{pytanieId}/wynik",  method = RequestMethod.POST)
+	/*@RequestMapping(value="/{pytanieId}/wynik",  method = RequestMethod.POST)
     public ModelAndView rozwiazanie(@PathVariable int pytanieId,@ModelAttribute("result") ModelAndView model,Odpowiedz odp, @RequestParam String action){
 		//Odpowiedz odpo = odpService.get(odpId);
         Pytanie pyt = new Pytanie();
@@ -74,5 +84,5 @@ public class QuizController {
         model.addObject("lista", lista);
         model.setViewName("result");
         return model;
-	}
+	}*/
 }
