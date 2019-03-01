@@ -51,7 +51,7 @@
 
 						<!-- Subject -->
 						<input name="klucz" id="subject" class="form"
-							placeholder="Wpisz klucz od 1 do 25" value=${klu} ></input>
+							placeholder="Wpisz klucz od 1 do 25" value=${klu}>
 					</div>
 					<!-- End Left Inputs -->
 					<!-- Right Inputs -->
@@ -79,6 +79,7 @@
 							<button type="submit" id="submit" name="action"
 								class="form-btn semibold">Dekoduj</button>
 						</div>
+						
 						<!-- End Bottom Submit -->
 						<!-- Clear -->
 				</form>
@@ -90,11 +91,11 @@
 						<strong>Thank You !</strong> Your email has been delivered.
 					</div>
 				</div>
-
 			</div>
 			<!-- End Contact Form Area -->
 		</div>
 		<!-- End Inner -->
+</form>
 
 		<div class="container">
 			<br>

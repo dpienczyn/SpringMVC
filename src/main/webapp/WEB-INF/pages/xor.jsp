@@ -67,17 +67,13 @@
 						<div class="wynik">
 							<i>WYNIK:</i> ${ t }
 						</div>
-						<div class="col-xs-6 wow animated slideInLeft"
-							data-wow-delay=".5s">
-							<div class="klucz">
-								<i>WYNIK:</i> ${klu}
-							</div>
 							<!-- Bottom Submit -->
 							<div class="relative fullwidth col-xs-12">
 								<!-- Send Button -->
 								<button type="submit" id="submit" name="action"
 									class="form-btn semibold">Zaszyfruj</button>
 							</div>
+							</br>
 							<!-- End Bottom Submit -->
 							<div class="relative fullwidth col-xs-12">
 								<!-- Send Button -->
@@ -88,17 +84,39 @@
 							<!-- Clear -->
 				</form>
 
-				<!-- Your Mail Message -->
-				<div class="mail-message-area">
-					<!-- Message -->
-					<div class="alert gray-bg mail-message not-visible-message">
-						<strong>Thank You !</strong> Your email has been delivered.
-					</div>
-				</div>
+				<div class="container">
+			<br>
+			<p>
 
-			</div>
-			<!-- End Contact Form Area -->
+				<strong><i>Szyfr XOR</i></strong> jest odmianą szyfru Vigenère'a. Różni się od niej tym, że zamiast manipulować na literach i znakach, zmienia bity i bajty elektronicznej wiadomości przechowywanej w pamięci komputera.
+			<center>
+				</br> <i>Szyfrowanie i deszyfrowanie można przedstawić za pomocą następujących wzorów:
+    </br><strong>M XOR K = C</strong>
+    </br><strong>C XOR K = M</strong></i></br>
+			</center>
+
+			</br>Zamiast dodawać do siebie dwie litery alfabetu, jak w oryginalnej wersji szyfru Vigenère'a, w szyfrze <strong><i>XOR</i></strong> algorytm sumuje kolejne bajty tekstu jawnego i sekretnego klucza o dowolnej długości za pomocą działania <strong><i>XOR</i></strong>. Po wykorzystaniu ostatniego bajtu klucza, przechodzi się z powrotem do pierwszego bajtu <i>(analogicznie jak w klasycznej wersji)</i>.
+
+W celu odszyfrowania postępuje się w taki sam sposób, czyli dodaje się kolejne bajty klucza do kolejnych bajtów szyfrogramu za pomocą operacji <strong><i>XOR</i></strong>.
+			</p>
 		</div>
-		<!-- End Inner -->
+		<!-- .//container -->
+
+		<br> <br> <br> <br> <br> <br> <br>
+		<br> <br> <br>
+		<article class="bg-secondary mb-3">
+		<div class="card-body text-center">
+			<h4 class="text-white">
+				<br> Dominika Pienczyn
+			</h4>
+			<a class="nav-link" href="https://github.com/dpienczyn"><img
+				src="<c:url value="/resources/image/logo.png" />" alt="image"
+				height="50" /> </a>
+			<p class="h5 text-white">November 2018</p>
+			<br>
+		</div>
+		<br>
+		<br>
+		</article>
 </body>
 </html>

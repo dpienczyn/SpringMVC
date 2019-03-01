@@ -23,17 +23,14 @@
 			</li>
 			<li class="nav-item"><a class="nav-link"
 				href="http://localhost:8088/Quiz/szyfr"> Szyfr Cezara </a></li>
-			<li class="nav-item dropdown"><a
-				class="nav-link  dropdown-toggle"
-				href="http://localhost:8088/Quiz/szyfr" data-toggle="dropdown">
-					Dropdown </a>
+				<li class="nav-item"><a class="nav-link"
+				href="http://localhost:8088/Quiz/szyfr"> Szyfr Xor </a></li>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item"
 						href="http://localhost:8088/Quiz/szyfr"> Szyfr Cezara</a></li>
 					<li><a class="dropdown-item" href="#"> Menu item 2 </a></li>
 				</ul></li>
-			<li class="nav-item"><a class="btn ml-2 btn-warning"
-				href="http://bootstrap-ecommerce.com">Download</a></li>
+			
 		</ul>
 	</div>
 </nav>
