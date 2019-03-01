@@ -19,12 +19,12 @@
 	<div class="collapse navbar-collapse" id="navbar1">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item active"><a class="nav-link"
-				href="http://localhost:8088/Quiz/">Home <span class="sr-only">(current)</span></a>
+				href="http://szyfrowanie.herokuapp.com/">Home <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item"><a class="nav-link"
-				href="http://localhost:8088/Quiz/szyfr"> Szyfr Cezara </a></li>
+				href="http://szyfrowanie.herokuapp.com/szyfr"> Szyfr Cezara </a></li>
 				<li class="nav-item"><a class="nav-link"
-				href="http://localhost:8088/Quiz/szyfr"> Szyfr Xor </a></li>
+				href="http://szyfrowanie.herokuapp.com/xor"> Szyfr Xor </a></li>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item"
 						href="http://localhost:8088/Quiz/szyfr"> Szyfr Cezara</a></li>
