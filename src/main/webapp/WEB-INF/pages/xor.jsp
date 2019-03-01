@@ -26,7 +26,29 @@
 	rel="stylesheet">
 </head>
 <body>
-	<header> <jsp:include page="menu.jsp" /> </header>
+	 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <img src="<c:url value="/resources/image/kodowanie.png" />" alt="image"
+		height="120" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item ">
+                        <a class="nav-link href="http://szyfrowanie.herokuapp.com/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://szyfrowanie.herokuapp.com/szyfr">SZYFR CEZARA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://szyfrowanie.herokuapp.com/xor">SZYFR XOR</a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+</nav>
 
 	<section>
 	<div class="container">

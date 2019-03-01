@@ -26,7 +26,29 @@
 	rel="stylesheet">
 </head>
 <body>
-	<header> <jsp:include page="menu.jsp" /> </header>
+	 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <img src="<c:url value="/resources/image/kodowanie.png" />" alt="image"
+		height="120" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item ">
+                        <a class="nav-link href="http://szyfrowanie.herokuapp.com/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://szyfrowanie.herokuapp.com/szyfr">SZYFR CEZARA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://szyfrowanie.herokuapp.com/xor">SZYFR XOR</a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+</nav>
 
 	<section>
 	<div class="container">
@@ -66,6 +88,7 @@
 						<div class="wynik">
 							<i>WYNIK:</i> ${ t }
 						</div>
+						</div>
 						<!-- Bottom Submit -->
 						<div class="relative fullwidth col-xs-12">
 							<!-- Send Button -->
@@ -79,24 +102,12 @@
 							<button type="submit" id="submit" name="action"
 								class="form-btn semibold">Dekoduj</button>
 						</div>
+						</form>
+						</div>
+						</div>
 						
-						<!-- End Bottom Submit -->
-						<!-- Clear -->
-				</form>
 
-				<!-- Your Mail Message -->
-				<div class="mail-message-area">
-					<!-- Message -->
-					<div class="alert gray-bg mail-message not-visible-message">
-						<strong>Thank You !</strong> Your email has been delivered.
-					</div>
-				</div>
-			</div>
-			<!-- End Contact Form Area -->
-		</div>
-		<!-- End Inner -->
-</form>
-
+		
 		<div class="container">
 			<br>
 			<p>

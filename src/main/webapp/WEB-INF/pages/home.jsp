@@ -15,12 +15,14 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
+
+<link rel="stylesheet" href="<c:url value="/resources/css/d.css"/>" />
+<link rel="stylesheet" href="<c:url value="/resources/css/home.css"/>" />
+
 <script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="<c:url value="/resources/css/d.css"/>" />
-<link rel="stylesheet" href="<c:url value="/resources/css/home.css"/>" />
 <!------ Include the above in your HEAD tag ---------->
 
 <link href="http://fonts.googleapis.com/css?family=Arimo:400"
@@ -28,7 +30,29 @@
 </head>
 <body>
 
-	<header> <jsp:include page="menu.jsp" /> </header>
+	 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <img src="<c:url value="/resources/image/kodowanie.png" />" alt="image"
+		height="120" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item ">
+                        <a class="nav-link href="http://szyfrowanie.herokuapp.com/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://szyfrowanie.herokuapp.com/szyfr">SZYFR CEZARA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="http://szyfrowanie.herokuapp.com/xor">SZYFR XOR</a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+</nav>
 	<div id="text1">
 		<p>Szyfruj</p>
 	</div>
